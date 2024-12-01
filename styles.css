@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+/*Showcase*/
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    transition: 0.7s;
+    z-index: 2;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: overlay;
+    background: #68b2d4;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer; 
+    text-shadow: 0.5px 0.3px 0 #000;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+.text h2 {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: 0.5px 1px 3px #000;
+}
+
+.text h3 {
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: 0.5px 1px 3px #000;
+}
+
+.text p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    text-shadow: 0.5px 1px 3px #000;
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none; 
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.text a:hover {
+    letter-spacing: 5px;
+}
+
+/*Menu*/
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(media/menu-50.png) no-repeat center;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url(media/close-50.png) no-repeat center;
+    background-size: 25px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+}
+
+.menu ul li a:hover {
+    color: #18adf2;
+}
+
+/*Socials*/
+.socials {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.socials li a {
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.4s;
+}
+
+.socials li a:hover {
+    transform: scale(0.5) translateY(-15px);
+}
+
+/*Media Queries*/
+@media (max-width: 798px) {
+    .showcase, .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+    .text h3 {
+        font-size: 2em;
+    }
+}
